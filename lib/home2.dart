@@ -47,6 +47,7 @@ class _MyHomePage1State extends State<MyHomePage1> {
     }
 
     fltrNotification.schedule(1, "Times Upp!!!", task, scheduledTime, generalNotificationDetails);
+
   }
 
 
@@ -68,8 +69,10 @@ class _MyHomePage1State extends State<MyHomePage1> {
 
               TextField(
                 decoration: InputDecoration(
-                  border: OutlineInputBorder()
-                ),
+                  border: OutlineInputBorder()),
+                onChanged: (_val) {
+                  task = _val;
+                },
               ),
               SizedBox(height: 20,),
               Row(
